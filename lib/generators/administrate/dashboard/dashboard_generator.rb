@@ -103,6 +103,8 @@ module Administrate
       end
 
       def association_type(attribute)
+        puts "klass: #{klass}"
+        puts "attribute: #{attribute}"
         relationship = klass.reflections[attribute.to_s]
         if relationship.has_one?
           "Field::HasOne"
